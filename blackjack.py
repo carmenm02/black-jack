@@ -23,6 +23,15 @@ print("1\ Iteración estándar sobre un diccionario")
 for carta, valor in cartas.items():
     print("la carta {} vale {}".format(carta, valor))
 
+partidas = int(input("¿Cuantas quieres jugar?: "))
+primera=0
+while partidas != primera:
+    lista = list(cartas)
+    print("Seleccionó: ", end=" ")
+    carta = choice(lista)
+    score = cartas[carta]
+    print(carta, end=" ")
+
 print("2\ Iteración ordenada sobre un diccionario")
 for carta in sorted(cartas.keys()):
     print("la carta {} vale {}".format(carta, cartas[carta]))
@@ -41,10 +50,4 @@ print(" >>> su puntuación es de", score)
 
 main_banca = sample(lista_cartas, 2)
 score_banca = sum(cartas[carta] for carta in main_banca)
-print("La banca tiene: {} {}  >> su score es {}".format(main_banca[0],
-                                                          main_banca[1],
-                                                          score_banca))
-
-
-
-
+print("La banca tiene: {} {}  >> su score es {}".format(main_banca[0],main_banca[1], score_banca))
